@@ -4,7 +4,6 @@ var EmailLabel = document.getElementById("email-label");
 var EmailError = document.getElementById("email-error");
 
 
-
 function validateEmail(){
 
         EmailLabel.style.bottom = "45px";

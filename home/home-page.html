@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Canteen</title>
+    <link rel="stylesheet" href="home-page.css">
+</head>
+<body>
+    <div class="container1">
+        <h1> 
+            E - Canteen
+        </h1>
+        <div id="searchBar">
+            <input type="button" name="menuBtn" id="menuBtn" img="img/menuBTN.png" onclick="opensideMenu()">
+            <input type="text" name="searchTab" id="searchTab" placeholder="Search...">
+            <input type="button" name="searchBtn" id="searchBtn" value="Find" onclick="searchdata()">
+        </div>
+    </div>
+    <div id="container2">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 2</div>
+            <img src="img/slideshow/burger.jpg" id="simg1" class="imgaes" height="300px" width="auto">
+            <div class="text">Caption Text</div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 2</div>
+            <img src="img/slideshow/pizza.jpg" id="simg1" class="imgaes" height="300px" width="auto">
+            <div class="text">Caption Two</div>
+          </div>
+           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+    <div id="container3">
+       <div id="canteen_title">
+        <a href="../canteenData/canteenView.html" style="text-decoration: none;">
+            <input type="button" value="Canteen 1: First floor"/>         
+           </a>
+       </div>
+    </div>
+
+</body>
+</html>

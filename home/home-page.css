@@ -32,7 +32,6 @@
 .mySlides {
     display: none;
 }
-
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -90,16 +89,7 @@
     background-color: #717171;
   }
   
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+
 #container3{
     height: auto;
     width: auto;
@@ -108,4 +98,10 @@
     justify-content: space-evenly;
     border-radius: 5px;
     margin: 10px;
+}
+.canteenName{
+    font-size: large;
+    height: 100px;
+    width: 50%;
+    margin: 1%;
 }

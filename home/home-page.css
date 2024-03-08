@@ -1,99 +1,85 @@
+#title{
+    font-size: xxx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    background-image: url(img/kitchen.jpg);
+}
 .container1{
     height: auto;
     width: auto;
+    color: white;
     border: 5px solid;
+    display: inline;
     text-align: center;
     justify-content: space-evenly;
     border-radius: 5px;
-    margin: 10px;
+    background-color: black;
+    padding: 10px;
 }
 #menuBtn{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
     background-image: url("img/menuBTN.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center; 
     border: none; 
-    padding: 10px 20px
+    margin-bottom: -20px;
 }
 #menuBtn:hover{
     background-color: cyan;
     border: 5px solid black;
 }
 #searchTab{
-    height: 30px;
-    width: 90%;
+    height: 50px;
+    width: 70%;
     margin: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+
+}
+#searchBtn{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-image: url("img/search.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    border: none; 
+    margin-bottom: -20px; 
+
 }
 #container2{
-    max-width: 1000px;
-  position: relative;
-  margin: auto;
+    width: 500px;
+    height: 500px; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
-.mySlides {
-    display: none;
-}
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-  
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
- }
-  
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-  
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+#container2 img {
+    width: 100%; 
+    height: 100%; 
     position: absolute;
     top: 0;
-  }
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
+    left: 0;
+    transition: opacity 0.5s ease-in-out; 
+}
+#container2 img:first-child {
+    opacity: 1; 
+}
+
 
 #container3{
     height: auto;
     width: auto;
-    border: 5px solid;
+    border: 1px solid;
+    box-shadow: 1px 1px 5px;
     text-align: center;
     justify-content: space-evenly;
     border-radius: 5px;
@@ -104,4 +90,5 @@
     height: 100px;
     width: 50%;
     margin: 1%;
+    border-radius: 10px;
 }

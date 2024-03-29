@@ -9,12 +9,10 @@ body{
     height: auto;
     width: auto;
     color: white;
-    border: 5px solid;
     display: inline;
     text-align: center;
     justify-content: space-evenly;
     border-radius: 5px;
-    background-color: black;
     padding: 10px;
 }
 #menuBtn{
@@ -56,9 +54,8 @@ body{
 #container2{
     width: 500px;
     height: 500px; 
-    align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     overflow: hidden;
     position: relative;
 }

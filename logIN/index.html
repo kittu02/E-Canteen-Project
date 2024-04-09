@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <form method="post" action="">
+    <form method="post" action="actionTAKE.php">
         <div class="input-group">
             <label id="email-label" style="font-size: 20px;"> Email</label>
             <input id="email-feild" type="email" name="e_mail" spellcheck="false" placeholder="xyz@marwadiuniversity.ac.in" onkeyup="validateEmail()" required>
@@ -17,7 +17,7 @@
         <br> 
         <label for="password" style="font-size: 20px;">Password</label>
         <input type="password" id="password" name="pass" placeholder="Your placeholder here" required>
-        <input type="button" name="submitButton" value="SUBMIT"/>         
+        <input type="submit" name="submitButton" value="SUBMIT"/>         
         <br>
 
         <h4>Forgot Password?</h4>
@@ -25,40 +25,10 @@
         <br>
         --------------------- Or ------------------
         <br>
-        <input type="button" name="signUP" value="SignUp"/>
+        <a href="Signup.html">
+            <input type="button" name="signUP" value="SignUp"/>
+        </a>
     </form>
     <script src="script.js"></script>
 </body>
 </html>
-
-<?php
-if(isset($_POST['signUP'])){
-    include "./user_signuUP.php";
-}
-
-if(isset($_POST['submitButton'])){
-    $email = $_POST['e_mail'];
-    $pass = $_POST['pass'];
-
-    // link to the database
-    $link = mysqli_connect("localhost", "root", "", "e-canteen");
-    if($link === false){
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
-    else{
-        echo "Connected";
-    }
-    // inserting 
-    // $add = 
-    // check user is in table or not 
-    $verify = "SELECT * FROM user_table WHERE email='$email' AND user_pwd='$pass'";
-    if($verify === FALSE){
-        die("No User Found");
-        
-    }
-    else{
-        include "../../user/home/home-page.html" ;
-    }
-}
-?>
-

@@ -42,9 +42,15 @@ input{
     outline: none;
     color: #101010;
 }
-#password{
+/* #password{
     margin-bottom: 30px;
 }
+#username{
+    margin-bottom: 30px;
+}
+#enrolment{
+    margin-bottom: 30px;
+} */
 input[type="password"]{
     border: 2px solid #c2c2c2;
 }

@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <form>
+    <form method="post" action="">
         <div class="input-group">
             <label id="email-label" style="font-size: 20px;"> Email</label>
             <input id="email-feild" type="email" name="e_mail" spellcheck="false" placeholder="xyz@marwadiuniversity.ac.in" onkeyup="validateEmail()" required>
@@ -23,11 +23,9 @@
         <h4>Forgot Password?</h4>
         <a href="reset.html">Reset</a>
         <br>
-        ------------------ Or ------------------
+        --------------------- Or ------------------
         <br>
-        <a href="Signup.html" style="text-decoration: none;" >
-            <input type="button" name="signUP" value="SignUp"  />
-        </a> 
+        <input type="button" name="signUP" value="SignUp"/>
     </form>
     <script src="script.js"></script>
 </body>
@@ -35,7 +33,7 @@
 
 <?php
 if(isset($_POST['signUP'])){
-    include "./Signup.php";
+    include "./user_signuUP.php";
 }
 
 if(isset($_POST['submitButton'])){
@@ -51,7 +49,7 @@ if(isset($_POST['submitButton'])){
         echo "Connected";
     }
     // inserting 
-    $add = 
+    // $add = 
     // check user is in table or not 
     $verify = "SELECT * FROM user_table WHERE email='$email' AND user_pwd='$pass'";
     if($verify === FALSE){
@@ -63,3 +61,4 @@ if(isset($_POST['submitButton'])){
     }
 }
 ?>
+

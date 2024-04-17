@@ -8,7 +8,6 @@ if(isset($_POST['signUPData'])){
 
 
     if($pass1 == $pass2){
-        // link to the database
         require_once "../database/connect_once.php";
 
         // inserting 

@@ -16,10 +16,9 @@
         if($result === FALSE){
             die("No User Found"); 
         }else if($data["user_type"]=="user"){
-            header("Location: ../user/home/home-page.html");
+            header("Location: ../user/home/home-page.html");           // change here
         }else if($data["user_type"]=="admin"){
-            header("Location: ../admin/home/admin_index.html");
+            header("Location: ../admin/home/admin_index.html");     
         }
     }
 ?>
-

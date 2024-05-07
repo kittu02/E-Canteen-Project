@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Canteen</title>
+    <link rel="stylesheet" href="home-page.css">
+</head> 
+<body bg="img/kitchen.jpg">
+    <div class="container1">
+        <div id="title"> 
+            E - Canteen
+        </div>
+        <div id="searchBar">
+            <input type="button" name="menuBtn" id="menuBtn" img="img/menuBTN.png" onclick="opensideMenu()">
+            <input type="text" name="searchTab" id="searchTab" placeholder="Search...">
+            <input type="button" name="searchBtn" id="searchBtn"  onclick="searchdata()">
+        </div>
+    </div>
+    <div >
+    <div id="container2">
+        <img src="img/slideshow/pizza.png" class="slide" />
+        <img src="img/slideshow/burger.png" class="slide" />
+    </div>
+
+    <div id="container3">
+       <div id="canteen_title">
+        <a href="../canteenData/canteenView.html" style="text-decoration: none;">
+            <input type="button" id="canteenName1" class="canteenName" value="Canteen 1: First floor"/>         
+        </a>
+        <a href="../canteenData/canteenView.html" style="text-decoration: none;">
+            <input type="button" id="canteenName2" class="canteenName"value="Canteen 2"/>         
+        </a>
+       </div>
+    </div>
+    <script src="home-page.js"></script>
+</body>
+</html>

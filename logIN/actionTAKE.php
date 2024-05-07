@@ -18,6 +18,7 @@
         }else if($data["user_type"]=="user"){
             header("Location: ../user/home/home-page.html");           // change here
         }else if($data["user_type"]=="admin"){
+            require_once '../database/load_food.php';
             header("Location: ../admin/home/admin_index.html");     
         }
     }

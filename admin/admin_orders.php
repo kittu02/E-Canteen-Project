@@ -40,10 +40,30 @@
         </div>
     </nav>
 
+    <div>
+        <button class="addMenu">Add Menu</button>  
+    </div>
+    <form>
+        
+    </form>
+    <div class="">
+
+    </div>
 
     <div class="mt-5 p-4 bg-dark text-white text-center">
         <p>Footer</p>
     </div>
+    <script>
+        $(document).ready(function(){
+            $(".addMenu").click(function(){
+                $("div.confirmOrder").show(50);
+            });
+            $(".confirmAdd").click(function(){
+                $("div.confirmOrder").hide(50);
+            });
+        });
+    </script>
+
 </body>
 </html>
 

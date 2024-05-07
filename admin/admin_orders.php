@@ -19,30 +19,54 @@
         <div class="container-fluid">
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="admin_index.html">Home</a>
+                <a class="nav-link" href="home/admin_index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../admin_orders.php">Orders</a>
+              <a class="nav-link active" href="./admin_orders.php">Orders</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../admin_canteen_menu.php">Food Menu</a>
+                <a class="nav-link" href="./admin_canteen_menu.php">Food Menu</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="../admin_canteen_history.php">History</a>
+               <a class="nav-link" href="./admin_canteen_history.php">History</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../admin_canteen_feedbacks.php">Feedbacks</a>
+                <a class="nav-link" href="./admin_canteen_feedbacks.php">Feedbacks</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../admin_canteen_report.php">Report</a>
+              <a class="nav-link" href="./admin_canteen_report.php">Report</a>
             </li>   
           </ul>
         </div>
     </nav>
 
+    <div>
+        <button class="addMenu">Add Menu</button>  
+    </div>
+    <form>
+        
+    </form>
+    <div class="">
+
+    </div>
 
     <div class="mt-5 p-4 bg-dark text-white text-center">
         <p>Footer</p>
     </div>
+    <script>
+        $(document).ready(function(){
+            $(".addMenu").click(function(){
+                $("div.confirmOrder").show(50);
+            });
+            $(".confirmAdd").click(function(){
+                $("div.confirmOrder").hide(50);
+            });
+        });
+    </script>
+
 </body>
 </html>
+
+<?php
+    include '../database/connect_once.php'; 
+?>

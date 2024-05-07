@@ -14,5 +14,5 @@
     if(mysqli_query($link, $sqlTB)===false){
         echo "Error" . mysqli_error($link);
     }
-
 ?>
+    

@@ -1,5 +1,6 @@
 <?php
-    // link to the database
+   session_start();
+   // link to the database
     if(isset($_POST['signUP'])){
         include "./Signup.html";
     }
@@ -15,11 +16,18 @@
 
         if($result === FALSE){
             die("No User Found"); 
-        }else if($data["user_type"]=="user"){
-            header("Location: ../user/home/home-page.html");           // change here
-        }else if($data["user_type"]=="admin"){
-            require_once '../database/load_food.php';
-            header("Location: ../admin/home/admin_index.html");     
+        } else{
+            $_SESSION['email'] = $email;    
+            $_SESSION['user_type'] = $data["user_type"];
+            if(preg_match('/^admin/i', $data["user_type"])) {
+                require_once '../database/load_food.php';
+                header("Location: ../admin/home/admin_index.html");
+                exit();
+            } else if($data["user_type"] == "user") {
+                header("Location: ../user/home/home-page.html");
+                exit();
+            }
         }
+            
     }
 ?>

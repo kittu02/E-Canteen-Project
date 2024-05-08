@@ -1,12 +1,4 @@
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+ 
                 <!DOCTYPE html>
                 <html lang="en">
                 <?php
@@ -14,16 +6,8 @@ include("../connection/connect.php");
 error_reporting(0);
 session_start();
 
-
-
-
 if(isset($_POST['submit']))          
 {
-	
-			
-		
-			
-		  
 		
 		
 		if(empty($_POST['d_name'])||empty($_POST['about'])||$_POST['price']==''||$_POST['res_name']=='')
@@ -115,15 +99,7 @@ if(isset($_POST['submit']))
 
 
 ?>
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+ 
 
                 <head>
                     <meta charset="utf-8">
@@ -167,15 +143,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 
                                     <ul class="navbar-nav my-lg-0">
 
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                         
 
 
                                         <li class="nav-item dropdown">
@@ -192,15 +160,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                         
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
@@ -214,15 +174,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 </div>
                             </nav>
                         </div>
-                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+         
 
 
                         <div class="left-sidebar">
@@ -249,15 +201,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
 
-                                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                 
 
                                             </ul>
                                         </li>
@@ -276,15 +220,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                             </div>
 
 
-                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+             
 
                             <div class="container-fluid">
                                 <!-- Start Page Content -->
@@ -294,15 +230,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 									        echo $success; ?>
 
 
-                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                 
 
 
                                 <div class="col-lg-12">
@@ -331,15 +259,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                         </div>
 
                                                     </div>
-                                                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                     
 
                                                     <div class="row p-t-20">
                                                         <div class="col-md-6">
@@ -363,15 +283,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 
 
 
-                                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                         
 
 
 
@@ -398,15 +310,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                     </div>
 
                                                 </div>
-                                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                 
 
                                         </div>
                                         <div class="form-actions">
@@ -415,15 +319,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                         </div>
                                         </form>
                                     </div>
-                                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                     
 
                                 </div>
                             </div>
@@ -440,15 +336,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     <script src="js/sidebarmenu.js"></script>
                     <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
                     <script src="js/custom.min.js"></script>
-                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+     
 
                 </body>
 

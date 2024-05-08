@@ -1,26 +1,6 @@
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-                <!DOCTYPE html>
-                <html lang="en">
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-                <?php
-
-
+<!DOCTYPE html>
+<html lang="en">
+<?php
 session_start();
 error_reporting(0);
 include("../connection/connect.php");
@@ -41,10 +21,6 @@ if(isset($_POST['submit'] ))
 		}
 	else
 	{
-		
-
-	
-	
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) // Validate email address
     {
        	$error = '<div class="alert alert-danger alert-dismissible fade show">
@@ -59,40 +35,23 @@ if(isset($_POST['submit'] ))
 																<strong>Password must be >=6!</strong>
 															</div>';
 	}
-	
 	elseif(strlen($_POST['phone']) < 10)
 	{
 		$error = '<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>invalid phone!</strong>
 															</div>';
-	}
-	
+	}	
 	else{
-       
-	
 	$mql = "update users set username='$_POST[uname]', f_name='$_POST[fname]', l_name='$_POST[lname]',email='$_POST[email]',phone='$_POST[phone]',password='".md5($_POST['password'])."' where u_id='$_GET[user_upd]' ";
 	mysqli_query($db, $mql);
 			$success = 	'<div class="alert alert-success alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>User Updated!</strong></div>';
-	
     }
 	}
-
 }
-
 ?>
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
                 <head>
                     <meta charset="utf-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -105,15 +64,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     <link href="css/helper.css" rel="stylesheet">
                     <link href="css/style.css" rel="stylesheet">
                 </head>
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                 <body class="fix-header">
                     <div class="preloader">
@@ -138,18 +88,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                     </ul>
 
                                     <ul class="navbar-nav my-lg-0">
-
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
                                         <li class="nav-item dropdown">
 
                                             <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
@@ -177,15 +115,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 </div>
                             </nav>
                         </div>
-                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                         <div class="left-sidebar">
 
@@ -210,17 +139,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                             <ul aria-expanded="false" class="collapse">
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
-
-                                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
                                             </ul>
                                         </li>
                                         <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
@@ -242,49 +160,15 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 <div class="col-md-5 align-self-center">
                                     <h3 class="text-primary">Dashboard</h3>
                                 </div>
-
                             </div>
-                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
                             <div class="container-fluid">
-
                                 <div class="row">
 
-
-
                                     <div class="container-fluid">
-
-
-
                                         <?php  
 									        echo $error;
 									        echo $success; 
-											
-											
-											
 											?>
-
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
-
                                         <div class="col-lg-12">
                                             <div class="card card-outline-primary">
                                                 <div class="card-header">
@@ -314,15 +198,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                 </div>
 
                                                             </div>
-                                                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                                                             <div class="row p-t-20">
                                                                 <div class="col-md-6">
@@ -340,15 +215,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                 </div>
 
                                                             </div>
-                                                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                                                             <div class="row">
                                                                 <div class="col-md-6">
@@ -365,19 +231,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-
-                                                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
                                                         </div>
                                                 </div>
                                                 <div class="form-actions">
@@ -388,53 +241,10 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
-
-
-
-                                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
-
-
-
-
                                 </div>
-
                             </div>
-                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
                             <?php include "include/footer.php" ?>
-
                         </div>
-
                     </div>
 
                     <script src="js/lib/jquery/jquery.min.js"></script>
@@ -447,13 +257,4 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 
                 </body>
 
-                </html>
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+            </html> 

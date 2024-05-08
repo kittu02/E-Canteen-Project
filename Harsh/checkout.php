@@ -123,7 +123,7 @@ else{
                                                     <tbody>
                                                         <tr>
                                                             <td>Cart Subtotal</td>
-                                                            <td> <?php echo "$".$item_total; ?></td>
+                                                            <td> <?php echo "₹".$item_total; ?></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Delivery Charges</td>
@@ -131,7 +131,7 @@ else{
                                                         </tr>
                                                         <tr>
                                                             <td class="text-color"><strong>Total</strong></td>
-                                                            <td class="text-color"><strong> <?php echo "$".$item_total; ?></strong></td>
+                                                            <td class="text-color"><strong> <?php echo "₹".$item_total; ?></strong></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

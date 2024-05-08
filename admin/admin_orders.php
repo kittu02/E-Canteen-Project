@@ -1,3 +1,16 @@
+<?php
+   session_start();
+   include '../database/connect_once.php'; 
+   $email = $_SESSION['email'];
+   $string = $_SESSION['user_type'];
+   preg_match('/\d$/', $string, $matches);
+   $link = mysqli_connect("localhost", "root", "", "e_canteen");
+   if($link === false){
+       die("ERROR: Could not connect. " . mysqli_connect_error());
+   }
+   $cNo = $matches[0];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +52,62 @@
           </ul>
         </div>
     </nav>
+    <div class="placed_orders">
+      <?php
+        $orders = "SELECT A.*, FROM list_order A JOIN user_table B ON  ";
+        if($result = mysqli_query($link, $orders)){
+          if(mysqli_num_rows($result)>0){
+            echo '<br/>';
+            echo '<form method="POST" action="admin_orders.php">';
+            echo '<table class="table"> <thead class="thead -dark -sm">
+                <tr>
+                    <th>Order ID.</th>
+                    <th>Order No.</th>
+                    <th>Username</th> 
+                    <th>Enrolment No</th>
+                    <th>Food ID</th>
+                    <th>Food Name</th>
+                    <th>Quantity</th>
+                    <th>Order Date</th>
+                    <th>Order Status</th>
+                    <th>Price</th>
+                    <th>Payment Status</th>
+                </tr></thead>';
+                $sr=1;
+                while($rows = mysqli_fetch_array($result)){
+      ?>
+                <tr>
+                  <td><?php echo $sr; $sr++; ?></td>
+                  <td> <?php echo $row['title']; ?> </td>
+                  <td> <?php echo $row['title']; ?> </td>
+                  <td> <?php echo $row['title']; ?> </td>
+                  <td> <?php echo $row['title']; ?> </td>
+                  <td> <?php echo $row['title']; ?> </td>
+                  <td> <?php echo $row['title']; ?> </td>
+                  <td> <?php echo $row['title']; ?> </td>
+                  <td></td>
+                </tr>            
+                }
+          }
+        }
+      ?>    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button id="" class="" name=""> </button>
 
     <div class="mt-5 p-4 bg-dark text-white text-center">
         <p>Footer</p>

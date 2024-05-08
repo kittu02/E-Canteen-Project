@@ -147,11 +147,8 @@ foreach ($_SESSION["cart_item"] as $item)
 $item_total += ($item["price"]*$item["quantity"]); 
 }
 ?>
-
                             </div>
                         </div>
-
-
 
                         <div class="widget-body">
                             <div class="price-wrap text-xs-center">
@@ -161,7 +158,6 @@ $item_total += ($item["price"]*$item["quantity"]);
                                 <?php
                                         if($item_total==0){
                                         ?>
-
 
                                 <a href="checkout.php?res_id=<?php echo $_GET['res_id'];?>&action=check" class="btn btn-danger btn-lg disabled">Checkout</a>
 

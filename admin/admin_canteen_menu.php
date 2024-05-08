@@ -21,16 +21,6 @@
 
 
     if(isset($_POST["addNewItem"])){  
-        $id ='';
-        $id = '';
-        $name = ''; 
-        $photo = '';
-        $price = '';
-        $description = '';
-        $ingredients = '';
-        $expected_time = '';
-        $quantiy = '';
-        $cNo = '';
         $id = $_POST['txtID'];
         $id = strtoupper($id);
         $name = $_POST['txtName']; 
@@ -261,9 +251,9 @@
     <div id="editDiv" class="editMenu">
     <form method="post" action="admin_canteen_menu.php" class="floatingContent">
         ID 
-        <input type="text" name="txtEID" value="<?php echo $rowEdit['food_id']; ?>"><br/>
+        <input type="text" name="txtID" value="<?php echo $rowEdit['food_id']; ?>"><br/>
         Name 
-        <input type="text" name="txtEName" value="<?php echo $rowEdit['food_name']; ?>"><br/>
+        <input type="text" name="txtName" value="<?php echo $rowEdit['food_name']; ?>"><br/>
         Photo Link 
         <input type="text" name="txtPhoto" value="<?php echo $rowEdit['food_photo']; ?>"><br/>
         Price 

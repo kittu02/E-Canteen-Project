@@ -6,9 +6,7 @@ error_reporting(0);
 session_start();
 
 ?>
-
                 <head>
-     
 
                     <meta charset="utf-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,15 +42,9 @@ session_start();
 
                                     <ul class="navbar-nav mr-auto mt-md-0">
 
-                         
-
-
-
                                     </ul>
 
                                     <ul class="navbar-nav my-lg-0">
-
-
 
                                         <li class="nav-item dropdown">
 
@@ -68,8 +60,6 @@ session_start();
                                                 </ul>
                                             </div>
                                         </li>
-                         
-
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
@@ -83,9 +73,7 @@ session_start();
                                 </div>
                             </nav>
                         </div>
-         
-
-
+        
                         <div class="left-sidebar">
 
                             <div class="scroll-sidebar">
@@ -110,8 +98,6 @@ session_start();
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
                                  
-
-
                                             </ul>
                                         </li>
                                         <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
@@ -123,10 +109,8 @@ session_start();
 
                         </div>
          
-
                         <div class="page-wrapper">
                             
-
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-12">
@@ -152,8 +136,6 @@ session_start();
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                             
-
 
                                                             <?php
 												$sql="SELECT * FROM users order by u_id desc";
@@ -167,9 +149,7 @@ session_start();
 														{				
 																	while($rows=mysqli_fetch_array($query))
 																		{
-																					
-																				
-																				
+																							
 																					echo ' <tr><td>'.$rows['username'].'</td>
 																								<td>'.$rows['f_name'].'</td>
 																								<td>'.$rows['l_name'].'</td>
@@ -209,7 +189,6 @@ session_start();
                     <script src="js/sidebarmenu.js"></script>
                     <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
                     <script src="js/custom.min.js"></script>
-
 
                 </body>
 

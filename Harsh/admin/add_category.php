@@ -5,7 +5,6 @@ include("../connection/connect.php");
 error_reporting(0);
 session_start();
 
-
 if(isset($_POST['submit'] ))
 {
     if(empty($_POST['c_name']))
@@ -43,9 +42,7 @@ if(isset($_POST['submit'] ))
 
 }
 
-
 ?>
-
 
 <head>
     <meta charset="utf-8">
@@ -59,7 +56,6 @@ if(isset($_POST['submit'] ))
     <link href="css/style.css" rel="stylesheet">
 
 </head>
-
 
 <body class="fix-header">
     <div class="preloader">
@@ -122,7 +118,6 @@ if(isset($_POST['submit'] ))
                                 <li><a href="all_menu.php">All Menues</a></li>
                                 <li><a href="add_menu.php">Add Menu</a></li>
 
-
                             </ul>
                         </li>
                         <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
@@ -141,24 +136,13 @@ if(isset($_POST['submit'] ))
 
             <div class="container-fluid">
 
-
- 
-
                 <div class="row">
 
-
-
                     <div class="container-fluid">
-
-
 
                         <?php  
 									        echo $error;
 									        echo $success; ?>
-
-
-
-
 
                         <div class="col-lg-12">
                             <div class="card card-outline-primary">
@@ -177,7 +161,6 @@ if(isset($_POST['submit'] ))
                                                 </div>
                                             </div>
 
-
                                         </div>
                                         <div class="form-actions">
                                             <input type="submit" name="submit" class="btn btn-primary" value="Save">
@@ -192,7 +175,6 @@ if(isset($_POST['submit'] ))
 
                 <div class="col-12">
 
-     
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Listed Categories</h4>
@@ -211,7 +193,6 @@ if(isset($_POST['submit'] ))
                                     </thead>
                                     <tbody>
                          
-
                                         <?php
 												$sql="SELECT * FROM res_category order by c_id desc";
 												$query=mysqli_query($db,$sql);

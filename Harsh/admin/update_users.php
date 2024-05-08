@@ -21,7 +21,7 @@ if(isset($_POST['submit'] ))
 		}
 	else
 	{
-    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) // Validate email address
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
     {
        	$error = '<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>

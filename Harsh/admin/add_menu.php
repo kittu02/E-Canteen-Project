@@ -9,20 +9,16 @@ session_start();
 if(isset($_POST['submit']))          
 {
 		
-		
 		if(empty($_POST['d_name'])||empty($_POST['about'])||$_POST['price']==''||$_POST['res_name']=='')
 		{	
 											$error = 	'<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>All fields Must be Fillup!</strong>
 															</div>';
-									
-		
-								
+												
 		}
 	else
 		{
-		
 				$fname = $_FILES['file']['name'];
 								$temp = $_FILES['file']['tmp_name'];
 								$fsize = $_FILES['file']['size'];
@@ -36,8 +32,7 @@ if(isset($_POST['submit']))
 					{        
 									if($fsize>=10000000)
 										{
-		
-		
+
 												$error = 	'<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>Max Image Size is 1024kb!</strong> Try different Image.
@@ -47,10 +42,7 @@ if(isset($_POST['submit']))
 		
 									else
 										{
-												
-												
-												
-				                                 
+        
 												$sql = "INSERT INTO dishes(rs_id,title,slogan,price,img) VALUE('".$_POST['res_name']."','".$_POST['d_name']."','".$_POST['about']."','".$_POST['price']."','".$fnew."')";  // store the submited data ino the database :images
 												mysqli_query($db, $sql); 
 												move_uploaded_file($temp, $store);
@@ -59,8 +51,7 @@ if(isset($_POST['submit']))
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																 New Dish Added Successfully.
 															</div>';
-                
-	
+
 										}
 					}
 					elseif($extension == '')
@@ -83,24 +74,9 @@ if(isset($_POST['submit']))
 	   
 	   }
 
-
-
-	
-	
-	
-
 }
 
-
-
-
-
-
-
-
 ?>
- 
-
                 <head>
                     <meta charset="utf-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -155,7 +131,6 @@ if(isset($_POST['submit']))
                                             </div>
                                         </li>
                          
-
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
                                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
@@ -168,9 +143,7 @@ if(isset($_POST['submit']))
                                 </div>
                             </nav>
                         </div>
-         
-
-
+        
                         <div class="left-sidebar">
 
                             <div class="scroll-sidebar">
@@ -195,8 +168,6 @@ if(isset($_POST['submit']))
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
 
-                                 
-
                                             </ul>
                                         </li>
                                         <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
@@ -209,21 +180,13 @@ if(isset($_POST['submit']))
                         </div>
 
                         <div class="page-wrapper">
-                            
-
-
-             
-
+    
                             <div class="container-fluid">
                                 <!-- Start Page Content -->
 
 
                                 <?php  echo $error;
 									        echo $success; ?>
-
-
-                 
-
 
                                 <div class="col-lg-12">
                                     <div class="card card-outline-primary">
@@ -252,7 +215,6 @@ if(isset($_POST['submit']))
 
                                                     </div>
                                      
-
                                                     <div class="row p-t-20">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -269,16 +231,7 @@ if(isset($_POST['submit']))
                                                         </div>
                                                     </div>
 
-
-
                                                     <div class="row">
-
-
-
-                                         
-
-
-
 
                                                         <div class="col-md-12">
                                                             <div class="form-group">
@@ -296,14 +249,9 @@ if(isset($_POST['submit']))
                                                                 </select>
                                                             </div>
                                                         </div>
-
-
-
                                                     </div>
-
                                                 </div>
-                                 
-
+                                
                                         </div>
                                         <div class="form-actions">
                                             <input type="submit" name="submit" class="btn btn-primary" value="Save">
@@ -312,7 +260,6 @@ if(isset($_POST['submit']))
                                         </form>
                                     </div>
                      
-
                                 </div>
                             </div>
                             <?php include "include/footer.php" ?>
@@ -329,7 +276,6 @@ if(isset($_POST['submit']))
                     <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
                     <script src="js/custom.min.js"></script>
      
-
                 </body>
 
                 </html>

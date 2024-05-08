@@ -17,6 +17,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
 		}
 	else
 		{
+		
 				$fname = $_FILES['file']['name'];
 								$temp = $_FILES['file']['tmp_name'];
 								$fsize = $_FILES['file']['size'];

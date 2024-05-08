@@ -27,6 +27,7 @@ if(isset($_POST['submit']))
                                 }
 	 }
 	
+	
 }
 
 ?>
@@ -43,9 +44,11 @@ if(isset($_POST['submit']))
 
                     <link rel="stylesheet" href="css/login.css">
 
+
                 </head>
 
                 <body>
+
 
                     <div class="container">
                         <div class="info">

@@ -1,4 +1,5 @@
- <?php
+ 
+<?php
     include("../connection/connect.php");
     error_reporting(0);
     session_start();
@@ -111,7 +112,7 @@ function f3() {
 
                     <div style="margin-left:50px;">
                         <form name="updateticket" id="updatecomplaint" method="post">
-
+                            
                             <table border="0" cellspacing="0" cellpadding="0">
 
                                 <?php 

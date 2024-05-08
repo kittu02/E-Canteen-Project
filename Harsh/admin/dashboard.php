@@ -12,6 +12,7 @@ else
 {
 ?>
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,6 +48,10 @@ else
                 <div class="navbar-collapse">
                     <ul class="navbar-nav mr-auto mt-md-0">
                     </ul>
+
+     
+
+
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
@@ -98,6 +103,7 @@ else
 
         <div class="page-wrapper">
 
+
             <div class="container-fluid">
                 <div class="col-lg-12">
                     <div class="card card-outline-primary">
@@ -142,6 +148,7 @@ else
                                 </div>
                             </div>
              
+
                             <div class="col-md-3">
                                 <div class="card p-30">
                                     <div class="media">
@@ -160,6 +167,7 @@ else
                                 </div>
                             </div>
              
+
                             <div class="col-md-3">
                                 <div class="card p-30">
                                     <div class="media">
@@ -198,6 +206,7 @@ else
                                 </div>
                             </div>
              
+
                             <div class="col-md-4">
                                 <div class="card p-30">
                                     <div class="media">

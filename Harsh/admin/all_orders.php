@@ -7,6 +7,8 @@ error_reporting(0);
 session_start();
 
 ?>
+ 
+
                 <head>
                     <meta charset="utf-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,6 +64,7 @@ session_start();
                                             </div>
                                         </li>
                          
+
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
                                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
@@ -99,6 +102,8 @@ session_start();
                                             <ul aria-expanded="false" class="collapse">
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
+
+                                 
 
                                             </ul>
                                         </li>

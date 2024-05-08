@@ -71,6 +71,7 @@ if(isset($_POST['submit']))
 						}               
 	   }
 }
+
 ?>
 
                 <head>
@@ -162,7 +163,9 @@ if(isset($_POST['submit']))
                                                 </ul>
                                             </div>
                                         </li>
+
                                     </ul>
+
 
                                     <ul class="navbar-nav my-lg-0">
                                         <li class="nav-item dropdown">
@@ -200,6 +203,7 @@ if(isset($_POST['submit']))
                                             <ul aria-expanded="false" class="collapse">
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
+
 
                                             </ul>
                                         </li>
@@ -319,12 +323,14 @@ if(isset($_POST['submit']))
                                                             </div>
                                                         </div>
 
+
                                                         <div class="col-md-6">
                                                             <div class="form-group has-danger">
                                                                 <label class="control-label">Image</label>
                                                                 <input type="file" name="file" id="lastName" class="form-control form-control-danger" placeholder="12n">
                                                             </div>
                                                         </div>
+
 
                                                         <div class="col-md-12">
                                                             <div class="form-group">
@@ -342,6 +348,9 @@ if(isset($_POST['submit']))
                                                                 </select>
                                                             </div>
                                                         </div>
+
+
+
 
                                                     </div>
 

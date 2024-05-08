@@ -168,7 +168,7 @@ session_start();
 																					           <td>'.$rows['username'].'</td>
 																								<td>'.$rows['title'].'</td>
 																								<td>'.$rows['quantity'].'</td>
-																								<td>$'.$rows['price'].'</td>
+																								<td>₹'.$rows['price'].'</td>
 																								<td>'.$rows['address'].'</td>';
 																								?>
                                                             <?php 
@@ -178,9 +178,9 @@ session_start();
 																			?>
                                                             <td> <button type="button" class="btn btn-info"><span class="fa fa-bars" aria-hidden="true"></span> Dispatch</button></td>
                                                             <?php 
-																			  }
+																			}
 																			   if($status=="in process")
-																			 { ?>
+																			{ ?>
                                                             <td> <button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span> On The Way!</button></td>
                                                             <?php
 																				}

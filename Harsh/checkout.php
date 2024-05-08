@@ -63,7 +63,7 @@ else{
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link active" href="canteens.php">Restaurants <span class="sr-only"></span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active" href="canteens.php">Canteens <span class="sr-only"></span></a> </li>
 
                             <?php
 						if(empty($_SESSION["user_id"]))
@@ -90,7 +90,7 @@ else{
                 <div class="container">
                     <ul class="row links">
 
-                        <li class="col-xs-12 col-sm-4 link-item"><span>1</span><a href="canteens.php">Choose Restaurant</a></li>
+                        <li class="col-xs-12 col-sm-4 link-item"><span>1</span><a href="canteens.php">Choose Canteen</a></li>
                         <li class="col-xs-12 col-sm-4 link-item "><span>2</span><a href="#">Pick Your favorite food</a></li>
                         <li class="col-xs-12 col-sm-4 link-item active"><span>3</span><a href="checkout.php">Order and Pay</a></li>
                     </ul>

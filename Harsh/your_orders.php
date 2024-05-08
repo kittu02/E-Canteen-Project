@@ -1,9 +1,4 @@
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -73,7 +68,7 @@ else
         color: #777;
     }
 
-    /* 
+    
 table { 
 	width: 750px; 
 	border-collapse: collapse; 
@@ -81,8 +76,8 @@ table {
 	
 	}
 
-/* Zebra striping */
-    /* tr:nth-of-type(odd) { 
+    /* Zebra striping */
+    tr:nth-of-type(odd) { 
 	background: #eee; 
 	}
 
@@ -98,12 +93,12 @@ td, th {
 	border: 1px solid #ccc; 
 	text-align: left; 
 	font-size: 14px;
-	
-	} */
+	 */
+	}
     @media only screen and (max-width: 760px),
     (min-device-width: 768px) and (max-device-width: 1024px) {
 
-        /* table { 
+        table { 
 	  	width: 100%; 
 	}
 
@@ -113,7 +108,7 @@ td, th {
 	} */
 
 
-        /* thead tr { 
+         thead tr { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
@@ -121,7 +116,7 @@ td, th {
 	
 	tr { border: 1px solid #ccc; } */
 
-        /* td { 
+      td { 
 		
 		border: none;
 		border-bottom: 1px solid #eee; 

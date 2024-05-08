@@ -40,8 +40,9 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`adm_id`, `username`, `password`, `email`, `code`, `date`) 
-VALUES (NULL, 'harsh', '12345678', 'harsh@gmail.com', '', current_timestamp());
+INSERT INTO `admin` (`adm_id`, `username`, `password`, `email`, `code`, `date`) VALUES
+(1, 'ccbd', '0d89ec971a7bcfe26d68c177a9d53334', 'admin@gmail.com', '', '2023-02-22 07:18:13');
+
 -- --------------------------------------------------------
 
 --

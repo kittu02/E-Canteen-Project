@@ -48,6 +48,23 @@ else{
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <style>
+        .Upi {
+            display: flex; /* Enable flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            background-image: url('images/img/pimg.jpg'); /* Background image */
+            background-size: cover; /* Make background cover the entire container */
+            background-position: center; /* Center the background image */
+        }
+
+        .Upi img {
+            max-width: 100%; /* Ensure image doesn't overflow */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+
 </head>
 <body>
 
@@ -76,10 +93,13 @@ else{
             </nav>
         </header>
 </div>
-
-
+.
+.
+.
+.
+.
     <div class="Upi">
-        <img 400px" src="images/Qr.png" ">
+        <img style="justify-content : centre"; src="images/Qr.png" ">
     </div>
 
     <script src="js/jquery.min.js"></script>

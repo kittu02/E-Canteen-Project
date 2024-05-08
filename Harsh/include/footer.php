@@ -24,9 +24,9 @@
                           <h5>Phone: +9313670684</a></h5>
                       </div>
                       <div class="col-xs-12 col-sm-5 additional-info color-gray">
-                          <h5>Contect Us</h5>
+                          <h5>Contact Us</h5>
                           <p>harsh.doshi116118@marwadiuniversity.ac.in</p>
-                          <p>kirtan.makwana@marwadiuniversity.ac.in</p>
+                          <p>kirtan.makwana119563@marwadiuniversity.ac.in</p>
                       </div>
                   </div>
               </div>

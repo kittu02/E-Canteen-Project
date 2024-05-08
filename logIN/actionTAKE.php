@@ -23,7 +23,7 @@
                 require_once '../database/load_food.php';
                 header("Location: ../admin/home/admin_index.html");
                 exit();
-            } else if($data["user_type"] == "user") {
+            } else {
                 header("Location: ../user/home/home-page.html");
                 exit();
             }

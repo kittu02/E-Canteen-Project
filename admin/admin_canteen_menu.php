@@ -21,6 +21,16 @@
 
 
     if(isset($_POST["addNewItem"])){  
+        $id ='';
+        $id = '';
+        $name = ''; 
+        $photo = '';
+        $price = '';
+        $description = '';
+        $ingredients = '';
+        $expected_time = '';
+        $quantiy = '';
+        $cNo = '';
         $id = $_POST['txtID'];
         $id = strtoupper($id);
         $name = $_POST['txtName']; 

@@ -10,14 +10,21 @@
    }
    $cNo = $matches[0];
 
+
+  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <title>Orders</title>
 </head>
 <body>
@@ -54,7 +61,7 @@
     </nav>
     <div class="placed_orders">
       <?php
-        $orders = "SELECT A.*, FROM list_order A JOIN user_table B ON  ";
+        $orders = "SELECT * FROM list_order A JOIN user_table B ON A.gr_no=B.gr_no JOIN food_list C ON A.food_id=C.food_id;";
         if($result = mysqli_query($link, $orders)){
           if(mysqli_num_rows($result)>0){
             echo '<br/>';
@@ -64,7 +71,7 @@
                     <th>Order ID.</th>
                     <th>Order No.</th>
                     <th>Username</th> 
-                    <th>Enrolment No</th>
+                    <th>GR No</th>
                     <th>Food ID</th>
                     <th>Food Name</th>
                     <th>Quantity</th>
@@ -75,25 +82,49 @@
                 </tr></thead>';
                 $sr=1;
                 while($rows = mysqli_fetch_array($result)){
+                  if($rows['order_status']==0){
       ?>
                 <tr>
-                  <td><?php echo $sr; $sr++; ?></td>
-                  <td> <?php echo $row['title']; ?> </td>
-                  <td> <?php echo $row['title']; ?> </td>
-                  <td> <?php echo $row['title']; ?> </td>
-                  <td> <?php echo $row['title']; ?> </td>
-                  <td> <?php echo $row['title']; ?> </td>
-                  <td> <?php echo $row['title']; ?> </td>
-                  <td> <?php echo $row['title']; ?> </td>
-                  <td></td>
+                  <!-- <td><?php echo $sr; $sr++; ?></td> -->
+                  <td> <?php echo $rows['order_id']; ?> </td>
+                  <td> <?php echo $rows['order_no']; ?> </td>
+                  <td> <?php echo $rows['user_name']; ?> </td>
+                  <td> <?php echo $rows['gr_no']; ?> </td>
+                  <td> <?php echo $rows['food_id']; ?> </td>
+                  <td> <?php echo $rows['food_name']; ?> </td>
+                  <td> <?php echo $rows['quan']; ?> </td>
+                  <td> <?php echo $rows['order_date']." ".$rows['order_time']; ?> </td>
+                  <td> <?php echo $rows['order_status']; ?> </td>
+                  <td> <?php echo $rows['food_pric'] * $rows['quan']; ?> </td>
+                  <td> <?php echo $rows['payment_status']; ?> </td>
+                  <td>
+                    <button class="btn btn-danger" type="button" name="sendReject" onclick="sendReject()" value="<?php echo $row['order_id']; ?>">
+                          <span><i class="fa fa-close" aria-hidden="true"></i></span>
+                      </button>
+                    <button class="btn btn-success" type="submit" name="sendConfirm" onclick="sendConfirm()" value="<?php echo $row['order_id']; ?>">
+                          <span><i class="fa fa-check" aria-hidden="true"></i></span>
+                      </button>
+                  </td>
                 </tr>  
       <?php
+                  }
                 }
           }
         }   
       ?>
+          </tbody>
+          </table>
+          </form>
     </div>
 
+    <script>
+      function sendReject(){
+
+      }
+      function sendConfirm(){
+        
+      }
+    </script>
 
 
 
@@ -108,7 +139,6 @@
 
 
 
-    <button id="" class="" name=""> </button>
 
     <div class="mt-5 p-4 bg-dark text-white text-center">
         <p>Footer</p>

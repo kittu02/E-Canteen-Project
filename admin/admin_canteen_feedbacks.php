@@ -35,7 +35,15 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./admin_canteen_report.php">Report</a>
-            </li>   
+            </li>  
+            <li class="navbar-nav ms-auto">
+                        <a class="nav-link dropdown-toggle text-muted " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/user-icn.png"  alt="user" class="profile-pic" /></a>
+                        <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                            <ul class="dropdown-user">
+                                <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </li> 
           </ul>
         </div>
     </nav>

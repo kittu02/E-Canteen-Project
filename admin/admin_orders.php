@@ -86,10 +86,12 @@
                   <td> <?php echo $row['title']; ?> </td>
                   <td> <?php echo $row['title']; ?> </td>
                   <td></td>
-                </tr>            
+                </tr>  
+      <?php
                 }
           }
         }   
+      ?>
     </div>
 
 

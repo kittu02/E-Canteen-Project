@@ -109,11 +109,11 @@ if(isset($_POST['submit'] ))
                         <li> <a href="dashboard.php"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
                         <li class="nav-label">Log</li>
                         <li> <a href="all_users.php"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Restaurant</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Canteen</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="all_restaurant.php">All Restaurants</a></li>
+                                <li><a href="all_s.php">All Canteen</a></li>
                                 <li><a href="add_category.php">Add Category</a></li>
-                                <li><a href="add_restaurant.php">Add Restaurant</a></li>
+                                <li><a href="add_canteen.php">Add Canteen</a></li>
 
                             </ul>
                         </li>
@@ -163,7 +163,7 @@ if(isset($_POST['submit'] ))
                         <div class="col-lg-12">
                             <div class="card card-outline-primary">
                                 <div class="card-header">
-                                    <h4 class="m-b-0 text-white">Add Restaurant Category</h4>
+                                    <h4 class="m-b-0 text-white">Add Canteen Category</h4>
                                 </div>
                                 <form action='' method='post'>
                                     <div class="form-body">

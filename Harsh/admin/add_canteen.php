@@ -11,22 +11,14 @@ session_start();
 
 if(isset($_POST['submit']))          
 {
-	
-			
-		
-			
-		  
-		
-		
+
 		if(empty($_POST['c_name'])||empty($_POST['res_name'])||$_POST['email']==''||$_POST['phone']==''||$_POST['url']==''||$_POST['o_hr']==''||$_POST['c_hr']==''||$_POST['o_days']==''||$_POST['address']=='')
 		{	
 											$error = 	'<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>All fields Must be Fillup!</strong>
 															</div>';
-									
-		
-								
+						
 		}
 	else
 		{
@@ -84,30 +76,14 @@ if(isset($_POST['submit']))
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>invalid extension!</strong>png, jpg, Gif are accepted.
 															</div>';
-						
-	   
+
 						}               
-	   
-	   
+
 	   }
-
-
-
-	
-	
-	
 
 }
 
-
-
-
-
-
-
-
 ?>
- 
 
                 <head>
                     <meta charset="utf-8">
@@ -144,10 +120,6 @@ if(isset($_POST['submit']))
 
                                     <ul class="navbar-nav mr-auto mt-md-0">
 
-
-                         
-
-
                                     </ul>
 
                                     <ul class="navbar-nav my-lg-0">
@@ -168,9 +140,6 @@ if(isset($_POST['submit']))
                                                 </ul>
                                             </div>
                                         </li>
-
-                         
-
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
@@ -202,45 +171,25 @@ if(isset($_POST['submit']))
                                                 <li><a href="all_canteen.php">All Canteens</a></li>
                                                 <li><a href="add_category.php">Add Category</a></li>
                                                 <li><a href="add_canteen.php">Add Canteen</a></li>
-                                 
-
                                             </ul>
                                         </li>
                                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Menu</span></a>
                                             <ul aria-expanded="false" class="collapse">
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
-
-
                                             </ul>
                                         </li>
                                         <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
 
                                     </ul>
                                 </nav>
-
                             </div>
-             
-
                         </div>
 
                         <div class="page-wrapper">
-                            
-
-             
-
-
                             <div class="container-fluid">
-
-
-
                                 <?php  echo $error;
 									        echo $success; ?>
-
-                 
-
-
-
                                 <div class="col-lg-12">
                                     <div class="card card-outline-primary">
                                         <div class="card-header">
@@ -249,7 +198,6 @@ if(isset($_POST['submit']))
                                         <div class="card-body">
                                             <form action='' method='post' enctype="multipart/form-data">
                                                 <div class="form-body">
-
                                                     <hr>
                                                     <div class="row p-t-20">
                                                         <div class="col-md-6">
@@ -265,10 +213,7 @@ if(isset($_POST['submit']))
                                                                 <input type="text" name="email" class="form-control form-control-danger">
                                                             </div>
                                                         </div>
-                                         
-
                                                     </div>
-
                                                     <div class="row p-t-20">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -285,8 +230,7 @@ if(isset($_POST['submit']))
                                                         </div>
 
                                                     </div>
-                                     
-
+                                    
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -303,8 +247,7 @@ if(isset($_POST['submit']))
                                                                 </select>
                                                             </div>
                                                         </div>
-                                         
-
+                                        
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Close Hours</label>
@@ -327,7 +270,6 @@ if(isset($_POST['submit']))
                                                             </div>
                                                         </div>
                                          
-
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Open Days</label>
@@ -343,17 +285,12 @@ if(isset($_POST['submit']))
                                                             </div>
                                                         </div>
 
-
                                                         <div class="col-md-6">
                                                             <div class="form-group has-danger">
                                                                 <label class="control-label">Image</label>
                                                                 <input type="file" name="file" id="lastName" class="form-control form-control-danger" placeholder="12n">
                                                             </div>
                                                         </div>
-
-
-                                         
-
 
                                                         <div class="col-md-12">
                                                             <div class="form-group">

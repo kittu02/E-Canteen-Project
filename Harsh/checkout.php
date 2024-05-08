@@ -8,8 +8,8 @@ session_start();
 
 
 function function_alert() { 
-    echo "<script>alert('Thank you. Your Order has been placed!');</script>"; 
-    echo "<script>window.location.replace('your_orders.php');</script>"; 
+    // echo "<script>alert('Thank you. Your Order has been placed!');</script>"; 
+    echo "<script>window.location.replace('Upi.php');</script>"; 
 } 
 
 if(empty($_SESSION["user_id"]))

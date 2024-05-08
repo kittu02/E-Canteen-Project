@@ -17,24 +17,24 @@ if(empty($_SESSION["user_id"]))
 	header('location:login.php');
 }
 else{						  
-												foreach ($_SESSION["cart_item"] as $item)
-												{
-												$item_total += ($item["price"]*$item["quantity"]);
-												
-													if($_POST['submit'])
-													{
+		foreach ($_SESSION["cart_item"] as $item)
+		{
+			$item_total += ($item["price"]*$item["quantity"]);
+		
+			if($_POST['submit'])
+			{
 						
-													$SQL="insert into users_orders(u_id,title,quantity,price) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."')";
+			$SQL="insert into users_orders(u_id,title,quantity,price) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."')";
 						
-														mysqli_query($db,$SQL);
-                                                        unset($_SESSION["cart_item"]);
-                                                        unset($item["title"]);
-                                                        unset($item["quantity"]);
-                                                        unset($item["price"]);
-														$success = "Thank you. Your order has been placed!";
-                                                        function_alert();
-													}
-												}
+			mysqli_query($db,$SQL);
+            unset($_SESSION["cart_item"]);
+            unset($item["title"]);
+            unset($item["quantity"]);
+            unset($item["price"]);
+			$success = "Thank you. Your order has been placed!";
+                function_alert();
+			}
+    	}
 ?>
 
 
@@ -45,7 +45,7 @@ else{
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Checkout || Online Food Ordering System - Code Camp BD</title>
+    <title>Checkout</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
@@ -125,10 +125,10 @@ else{
                                                             <td>Cart Subtotal</td>
                                                             <td> <?php echo "₹".$item_total; ?></td>
                                                         </tr>
-                                                        <tr>
+                                                        <!-- <tr>
                                                             <td>Delivery Charges</td>
                                                             <td>Free</td>
-                                                        </tr>
+                                                        </tr> -->
                                                         <tr>
                                                             <td class="text-color"><strong>Total</strong></td>
                                                             <td class="text-color"><strong> <?php echo "₹".$item_total; ?></strong></td>
@@ -139,18 +139,19 @@ else{
                                         </div>
                                         <div class="payment-option">
                                             <ul class=" list-unstyled">
-                                                <li>
+                                                <!-- <li>
                                                     <label class="custom-control custom-radio  m-b-20">
                                                         <input name="mod" id="radioStacked1" checked value="COD" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Cash on Delivery</span>
                                                     </label>
-                                                </li>
+                                                </li> -->
                                                 
                                                 <li>
                                                     <label class="custom-control custom-radio  m-b-10">
                                                         <input name="mod" type="radio" value="upi" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">UPI <img src="images/Gpay.png" alt="" width="30"><img src="images/Phonepe.png" alt="" width="30"><img src="images/Paytm.png" alt="" width="30"></span> </label>
                                                 </li>
                                             </ul>
-                                            <p class="text-xs-center"> <input type="submit" onclick="return confirm('Do you want to confirm the order?');" name="submit" class="btn btn-success btn-block" value="Order Now"> </p>
+                                            
+                                            <p class="text-xs-center"> <input type="submit" onclick="return confirm('Do you want to confirm the order?');" name="submit" class="btn btn-success btn-block" value="Proceed"> </p>
                                         </div>
                             </form>
                         </div>

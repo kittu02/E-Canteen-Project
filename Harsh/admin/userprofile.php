@@ -112,10 +112,7 @@ function f3() {
 
                     <div style="margin-left:50px;">
                         <form name="updateticket" id="updatecomplaint" method="post">
-
-
-
-
+                            
                             <table border="0" cellspacing="0" cellpadding="0">
 
                                 <?php 
@@ -127,15 +124,10 @@ $ret2=mysqli_query($db,"select * FROM users where u_id='".$ro['u_id']."'");
 while($row=mysqli_fetch_array($ret2))
 {
 ?>
-
-
-
-
                                 <tr>
                                     <td colspan="2"><b><?php echo $row['f_name'];?>'s profile</b></td>
 
                                 </tr>
-
 
                                 <tr>
                                     <td>&nbsp;</td>
@@ -154,8 +146,6 @@ while($row=mysqli_fetch_array($ret2))
                                     <td><b>Last Name:</b></td>
                                     <td><?php echo htmlentities($row['l_name']); ?></td>
                                 </tr>
-
-
 
                                 <tr height="50">
                                     <td><b>User Email:</b></td>

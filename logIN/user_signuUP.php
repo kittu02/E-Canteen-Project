@@ -11,7 +11,7 @@ if(isset($_POST['signUPData'])){
         require_once "../database/connect_once.php";
 
         // inserting 
-        $add = "INSERT INTO user_table (user_name,email,user_pwd,enrolment_no,user_type) VALUES('$name','$email','$pass1','$en_no','user')";
+        $add = "INSERT INTO user_table (user_name,email,user_pwd,gr_no,user_type) VALUES('$name','$email','$pass1','$en_no','user')";
         if(mysqli_query($link, $add)){
             echo "Records added successfully.";
             header("Location: ./index.html");

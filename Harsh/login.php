@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login || Code Camp BD</title>
+    <title>Login to E-Canteen</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -48,8 +48,6 @@
 							}
 						else
 							{
-									
-									
 										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">My Orders</a> </li>';
 									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Logout</a> </li>';
 							}
@@ -63,7 +61,7 @@
     </header>
     <div style=" background-image: url('images/img/pimg.jpg');">
 
-        <?php
+<?php
 include("connection/connect.php"); 
 error_reporting(0); 
 session_start(); 
@@ -74,8 +72,8 @@ if(isset($_POST['submit']))
 	
 	if(!empty($_POST["submit"]))   
      {
-	$loginquery ="SELECT * FROM users WHERE username='$username' && password='".md5($password)."'"; //selecting matching records
-	$result=mysqli_query($db, $loginquery); //executing
+	$loginquery ="SELECT * FROM users WHERE username='$username' && password='".md5($password)."'"; 
+	$result=mysqli_query($db, $loginquery); 
 	$row=mysqli_fetch_array($result);
 	
 	                        if(is_array($row)) 
@@ -88,7 +86,6 @@ if(isset($_POST['submit']))
                                       	$message = "Invalid Username or Password!"; 
                                 }
 	 }
-	
 	
 }
 ?>
@@ -114,7 +111,6 @@ if(isset($_POST['submit']))
                     <div class="cta">Not registered?<a href="registration.php" style="color:#5c4ac7;"> Create an account</a></div>
                 </div>
                 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
 
                 <div class="container-fluid pt-3">
                     <p></p>

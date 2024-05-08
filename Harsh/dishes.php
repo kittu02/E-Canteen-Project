@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -10,7 +9,6 @@ include_once 'product-action.php';
 
 ?>
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +16,7 @@ include_once 'product-action.php';
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Dishes || Online Food Ordering System - Code Camp BD</title>
+    <title>Document</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
@@ -106,7 +104,7 @@ include_once 'product-action.php';
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
 
-                    <div class="widget widget-cart">
+                    <div class="widget widget-cart" >
                         <div class="widget-heading">
                             <h3 class="widget-title text-dark">
                                 Your Cart
@@ -178,7 +176,6 @@ $item_total += ($item["price"]*$item["quantity"]);
 
                 <div class="col-md-8">
 
-
                     <div class="menu-widget" id="2">
                         <div class="widget-heading">
                             <h3 class="widget-title text-dark">
@@ -198,9 +195,7 @@ $item_total += ($item["price"]*$item["quantity"]);
 									{
 									foreach($products as $product)
 										{
-						
-													
-													 
+						 
 													 ?>
 
                             <div class="food-item">

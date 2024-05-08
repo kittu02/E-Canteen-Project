@@ -1,5 +1,10 @@
-
-<!DOCTYPE html>
+<!--  Author Name: MH RONY.
+                        GigHub Link: https://github.com/dev-mhrony
+                        Facebook Link:https://www.facebook.com/dev.mhrony
+                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
+                        Visit My Website : developerrony.com -->
+                        <!DOCTYPE html>
 <html lang="en">
 <?php
 include("connection/connect.php");
@@ -22,8 +27,6 @@ else
     <meta name="author" content="">
     <link rel="icon" href="#">
     <title>My Orders</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
@@ -48,19 +51,19 @@ else
 
     .panel-body {
         background: #e5e5e5;
-
+        /* Old browsers */
         background: -moz-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-
+        /* FF3.6+ */
         background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #e5e5e5), color-stop(100%, #ffffff));
-
+        /* Chrome,Safari4+ */
         background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-
+        /* Chrome10+,Safari5.1+ */
         background: -o-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-
+        /* Opera 12+ */
         background: -ms-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-
+        /* IE10+ */
         background: radial-gradient(ellipse at center, #e5e5e5 0%, #ffffff 100%);
-
+        /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#ffffff', GradientType=1);
         font: 600 15px "Open Sans", Arial, sans-serif;
     }
@@ -70,7 +73,7 @@ else
         color: #777;
     }
 
-    
+    /* 
 table { 
 	width: 750px; 
 	border-collapse: collapse; 
@@ -78,7 +81,8 @@ table {
 	
 	}
 
-    tr:nth-of-type(odd) { 
+/* Zebra striping */
+    /* tr:nth-of-type(odd) { 
 	background: #eee; 
 	}
 
@@ -94,12 +98,12 @@ td, th {
 	border: 1px solid #ccc; 
 	text-align: left; 
 	font-size: 14px;
-	 */
-	}
+	
+	} */
     @media only screen and (max-width: 760px),
     (min-device-width: 768px) and (max-device-width: 1024px) {
 
-        table { 
+        /* table { 
 	  	width: 100%; 
 	}
 
@@ -108,7 +112,8 @@ td, th {
 		display: block; 
 	} */
 
-         thead tr { 
+
+        /* thead tr { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
@@ -116,7 +121,7 @@ td, th {
 	
 	tr { border: 1px solid #ccc; } */
 
-      td { 
+        /* td { 
 		
 		border: none;
 		border-bottom: 1px solid #eee; 
@@ -147,6 +152,7 @@ td, th {
 
 <body>
 
+
     <header id="header" class="header-scroll top-header headrom">
 
         <nav class="navbar navbar-dark">
@@ -166,7 +172,8 @@ td, th {
 							}
 						else
 							{
-		
+									
+									
 									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">My Orders</a> </li>';
 									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Logout</a> </li>';
 							}
@@ -181,6 +188,8 @@ td, th {
     </header>
     <div class="page-wrapper">
 
+
+
         <div class="inner-page-hero bg-image" data-image-src="images/img/pimg.jpg">
             <div class="container"> </div>
 
@@ -188,6 +197,7 @@ td, th {
         <div class="result-show">
             <div class="container">
                 <div class="row">
+
 
                 </div>
             </div>
@@ -217,84 +227,20 @@ td, th {
                                     </thead>
                                     <tbody>
 
-    <?php 
+
+                                        <?php 
 				
-		$query_res= mysqli_query($db,"select * from users_orders where u_id='".$_SESSION['user_id']."'");
-								if(!mysqli_num_rows($query_res) > 0 )
-								{
-									echo '<td colspan="6"><center>You have No orders Placed yet. </center></td>';
-								}
-								else
-								{			      
+						$query_res= mysqli_query($db,"select * from users_orders where u_id='".$_SESSION['user_id']."'");
+												if(!mysqli_num_rows($query_res) > 0 )
+														{
+															echo '<td colspan="6"><center>You have No orders Placed yet. </center></td>';
+														}
+													else
+														{			      
 										  
-								while($row=mysqli_fetch_array($query_res))
-								{
+										  while($row=mysqli_fetch_array($query_res))
+										  {
 						
-<<<<<<< HEAD
-	?>
-    <tr>
-        <td data-column="Item"> <?php echo $row['title']; ?></td>
-        <td data-column="Quantity"> <?php echo $row['quantity']; ?></td>
-        <td data-column="price">$<?php echo $row['price']; ?></td>
-        <td data-column="status">
-    <?php 
-			$status=$row['status'];
-			if($status=="" or $status=="NULL")
-			{
-	?>
-
-    <button type="button" class="btn btn-info"><span class="fa fa-bars" aria-hidden="true"></span> Dispatch</button>
-
-    <?php 
-	}
-		if($status=="in process")
-		{ 
-    ?>
-        <button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span> On The Way!</button>
-    <?php
-
-	}
-		if($status=="closed")
-		{
-	?>
-        <button type="button" class="btn btn-success"><span class="fa fa-check-circle" aria-hidden="true"></span> Delivered</button>
-
-    <?php 
-
-	} 
-	?>
-    <?php
-    
-		if($status=="rejected")
-		{
-    ?>
-
-         <button type="button" class="btn btn-danger"> <i class="fa fa-close"></i> Cancelled</button>
-
-    <?php 
-	
-    } 
-	?>
-
-        </td>
-        <td data-column="Date"> <?php echo $row['date']; ?></td>
-        <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a>
-        </td>
-
-        </tr>
-
-
-    <?php }} ?>
-
-                    </tbody>
-        </table>
-
-        </div>
-
-        </div>
-
-        </div>
-=======
 							?>
                                         <tr>
                                             <td data-column="Item"> <?php echo $row['title']; ?></td>
@@ -329,23 +275,50 @@ td, th {
                                                 <?php 
 																			} 
 																			?>
+
+
+
+
+
+
                                             </td>
                                             <td data-column="Date"> <?php echo $row['date']; ?></td>
-                                            <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash" style="font-size:16px"></i></a>
+                                            <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a>
                                             </td>
->>>>>>> d506d88c8cb21b50d33688137ba0e4e0aad53367
 
-        </div>
-            
-        </div>
-    
-        </div>
-    
+                                        </tr>
+
+
+                                        <?php }} ?>
+
+
+
+
+                                    </tbody>
+                                </table>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+    </div>
     </section>
+
 
     <?php include "include/footer.php" ?>
 
     </div>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>

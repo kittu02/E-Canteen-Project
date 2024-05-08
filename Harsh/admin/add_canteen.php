@@ -6,9 +6,6 @@ include("../connection/connect.php");
 error_reporting(0);
 session_start();
 
-
-
-
 if(isset($_POST['submit']))          
 {
 
@@ -57,7 +54,7 @@ if(isset($_POST['submit']))
 			  
 													$success = 	'<div class="alert alert-success alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-																 New Canteen Added Successfully.
+																 New Restaurant Added Successfully.
 															</div>';
                 
 	
@@ -76,14 +73,38 @@ if(isset($_POST['submit']))
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>invalid extension!</strong>png, jpg, Gif are accepted.
 															</div>';
-
+						
+	   
 						}               
-
+	   
+	   
 	   }
+
+
+
+	
+	
+	
 
 }
 
+
+
+
+
+
+
+
 ?>
+                <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
 
                 <head>
                     <meta charset="utf-8">
@@ -92,7 +113,7 @@ if(isset($_POST['submit']))
                     <meta name="description" content="">
                     <meta name="author" content="">
                     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-                    <title>Add Canteen</title>
+                    <title>Add Restaurant</title>
                     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
                     <link href="css/helper.css" rel="stylesheet">
                     <link href="css/style.css" rel="stylesheet">
@@ -120,6 +141,18 @@ if(isset($_POST['submit']))
 
                                     <ul class="navbar-nav mr-auto mt-md-0">
 
+
+                                        <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
+
                                     </ul>
 
                                     <ul class="navbar-nav my-lg-0">
@@ -141,6 +174,17 @@ if(isset($_POST['submit']))
                                             </div>
                                         </li>
 
+                                        <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
+
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
                                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
@@ -155,7 +199,15 @@ if(isset($_POST['submit']))
                         </div>
 
                         <div class="left-sidebar">
-             
+                            <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
 
                             <div class="scroll-sidebar">
 
@@ -166,30 +218,84 @@ if(isset($_POST['submit']))
                                         <li> <a href="dashboard.php"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
                                         <li class="nav-label">Log</li>
                                         <li> <a href="all_users.php"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
-                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Canteen</span></a>
+                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Restaurant</span></a>
                                             <ul aria-expanded="false" class="collapse">
                                                 <li><a href="all_canteen.php">All Canteens</a></li>
                                                 <li><a href="add_category.php">Add Category</a></li>
                                                 <li><a href="add_canteen.php">Add Canteen</a></li>
+                                                <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
                                             </ul>
                                         </li>
                                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Menu</span></a>
                                             <ul aria-expanded="false" class="collapse">
                                                 <li><a href="all_menu.php">All Menues</a></li>
                                                 <li><a href="add_menu.php">Add Menu</a></li>
+
+
                                             </ul>
                                         </li>
                                         <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
 
                                     </ul>
                                 </nav>
+
                             </div>
+                            <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
                         </div>
 
                         <div class="page-wrapper">
+                            <div style="padding-top: 10px;">
+                                <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
+                            </div>
+
+                            <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
+
                             <div class="container-fluid">
+
+
+
                                 <?php  echo $error;
 									        echo $success; ?>
+
+                                <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
+
+
                                 <div class="col-lg-12">
                                     <div class="card card-outline-primary">
                                         <div class="card-header">
@@ -198,6 +304,7 @@ if(isset($_POST['submit']))
                                         <div class="card-body">
                                             <form action='' method='post' enctype="multipart/form-data">
                                                 <div class="form-body">
+
                                                     <hr>
                                                     <div class="row p-t-20">
                                                         <div class="col-md-6">
@@ -213,7 +320,18 @@ if(isset($_POST['submit']))
                                                                 <input type="text" name="email" class="form-control form-control-danger">
                                                             </div>
                                                         </div>
+                                                        <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
                                                     </div>
+
                                                     <div class="row p-t-20">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -230,7 +348,16 @@ if(isset($_POST['submit']))
                                                         </div>
 
                                                     </div>
-                                    
+                                                    <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -247,7 +374,16 @@ if(isset($_POST['submit']))
                                                                 </select>
                                                             </div>
                                                         </div>
-                                        
+                                                        <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Close Hours</label>
@@ -269,7 +405,16 @@ if(isset($_POST['submit']))
                                                                 </select>
                                                             </div>
                                                         </div>
-                                         
+                                                        <!-- /*!
+* Author Name: MH RONY.
+* GigHub Link: https://github.com/dev-mhrony
+* Facebook Link:https://www.facebook.com/dev.mhrony
+* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
+* Visit My Website : developerrony.com
+
+*/ -->
+
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Open Days</label>
@@ -284,6 +429,7 @@ if(isset($_POST['submit']))
                                                                 </select>
                                                             </div>
                                                         </div>
+
 
                                                         <div class="col-md-6">
                                                             <div class="form-group has-danger">
@@ -309,8 +455,6 @@ if(isset($_POST['submit']))
                                                             </div>
                                                         </div>
 
-
-
                                                     </div>
 
                                                     <h3 class="box-title m-t-40">Canteen Address</h3>
@@ -329,7 +473,7 @@ if(isset($_POST['submit']))
                                         </div>
                                         <div class="form-actions">
                                             <input type="submit" name="submit" class="btn btn-primary" value="Save">
-                                            <a href="add_canteen.php" class="btn btn-inverse">Cancel</a>
+                                            <a href="add_restaurant.php" class="btn btn-inverse">Cancel</a>
                                         </div>
                                         </form>
                                     </div>
@@ -341,7 +485,6 @@ if(isset($_POST['submit']))
                     </div>
 
                     </div>
-     
 
                     </div>
 
@@ -356,4 +499,3 @@ if(isset($_POST['submit']))
                 </body>
 
                 </html>
- 

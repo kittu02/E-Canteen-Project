@@ -41,9 +41,7 @@ session_start();
 							  <li class="nav-item"><a href="registration.php" class="nav-link active">Register</a> </li>';
 							}
 						else
-							{
-									
-									
+							{	
 										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">My Orders</a> </li>';
 									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Logout</a> </li>';
 							}
@@ -87,8 +85,6 @@ session_start();
                                 <?php $ress= mysqli_query($db,"select * from restaurant");
 									      while($rows=mysqli_fetch_array($ress))
 										  {
-													
-						
 													 echo' <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
 															<div class="entry-logo">
 																<a class="img-fluid" href="dishes.php?res_id='.$rows['rs_id'].'" > <img src="admin/Res_img/'.$rows['image'].'" alt="Food logo"></a>
@@ -111,17 +107,13 @@ session_start();
 															</div>';
 										  }
 						
-						
-						?>
+						        ?>
 
                             </div>
 
                         </div>
 
-
-
                     </div>
-
 
                 </div>
             </div>

@@ -136,15 +136,9 @@ if(isset($_POST['submit']))
 
                                     <ul class="navbar-nav mr-auto mt-md-0">
 
-
-
-
                                     </ul>
 
                                     <ul class="navbar-nav my-lg-0">
-
-                         
-
 
                                         <li class="nav-item dropdown">
 
@@ -263,7 +257,7 @@ if(isset($_POST['submit']))
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Price </label>
-                                                                <input type="text" name="price" class="form-control" placeholder="$">
+                                                                <input type="text" name="price" class="form-control" placeholder="rs">
                                                             </div>
                                                         </div>
 

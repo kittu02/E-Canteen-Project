@@ -22,6 +22,8 @@ else
     <meta name="author" content="">
     <link rel="icon" href="#">
     <title>My Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
@@ -157,7 +159,7 @@ td, th {
                 <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                        <li class="nav-item"> <a class="nav-link active" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
+                        <li class="nav-item"> <a class="nav-link active" href="canteens.php">Restaurants <span class="sr-only"></span></a> </li>
 
                         <?php
 						if(empty($_SESSION["user_id"]))
@@ -270,15 +272,9 @@ td, th {
                                                 <?php 
 																			} 
 																			?>
-
-
-
-
-
-
                                             </td>
                                             <td data-column="Date"> <?php echo $row['date']; ?></td>
-                                            <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a>
+                                            <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash" style="font-size:16px"></i></a>
                                             </td>
 
                                         </tr>

@@ -99,7 +99,7 @@ else{
 .
 .
     <div class="Upi">
-        <img style="justify-content : centre"; src="images/Qr.png" ">
+        <img 400px" src="images/Qr.png" ">
     </div>
 
     <script src="js/jquery.min.js"></script>
@@ -115,7 +115,7 @@ else{
 
                                         <div class="payment-option">
 
-                                            <p class="text-xs-center"> <input type="submit" onclick="return confirm('Thank you for payment of yout order!');" name="submit" class="btn btn-success btn-block" value="Done"> </p>
+                                            <p class="text-xs-center"> <input type="submit" onclick="confirm('Thank you for payment of yout order!'); location.replace('./your_orders.php');" name="submit" class="btn btn-success btn-block" value="Done"> </p>
                                         </div>
                                         
 </body>

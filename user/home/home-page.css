@@ -1,7 +1,10 @@
 #title{
     font-size: xxx-large;
+    color: aliceblue;
+    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 body{
     background-image: url(img/kitchen.jpg);
 }

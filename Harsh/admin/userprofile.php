@@ -1,36 +1,27 @@
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
+ 
+<?php
+    include("../connection/connect.php");
+    error_reporting(0);
+    session_start();
+    if(strlen($_SESSION['user_id'])==0)
+    { 
+    header('location:../login.php');
+    }
+    else
+    {
+    if(isset($_POST['update']))
+    {
+    $form_id=$_GET['form_id'];
+    $status=$_POST['status'];
+    $remark=$_POST['remark'];
+    $query=mysqli_query($db,"insert into remark(frm_id,status,remark) values('$form_id','$status','$remark')");
+    $sql=mysqli_query($db,"update users_orders set status='$status' where o_id='$form_id'");
 
-*/ -->
-                <?php
+    echo "<script>alert('form details updated successfully');</script>";
 
-include("../connection/connect.php");
-error_reporting(0);
-session_start();
-if(strlen($_SESSION['user_id'])==0)
-  { 
-header('location:../login.php');
-}
-else
-{
-  if(isset($_POST['update']))
-  {
-$form_id=$_GET['form_id'];
-$status=$_POST['status'];
-$remark=$_POST['remark'];
-$query=mysqli_query($db,"insert into remark(frm_id,status,remark) values('$form_id','$status','$remark')");
-$sql=mysqli_query($db,"update users_orders set status='$status' where o_id='$form_id'");
+    }
 
-echo "<script>alert('form details updated successfully');</script>";
-
-  }
-
- ?>
+?>
                 <script language="javascript" type="text/javascript">
 function f2() {
     window.close();
@@ -41,15 +32,7 @@ function f3() {
     window.print();
 }
                 </script>
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+ 
 
                 <head>
                     <meta charset="utf-8">
@@ -184,24 +167,6 @@ while($row=mysqli_fetch_array($ret2))
                                     <td><?php echo htmlentities($row['phone']); ?></td>
                                 </tr>
 
-
-
-                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
-
-
-
-
-
                                 <tr height="50">
                                     <td><b>Status:</b></td>
                                     <td><?php if($row['status']==1)
@@ -220,26 +185,14 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 </tr>
 
                                 <?php } 
-
  
     ?>
-                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
                             </table>
                         </form>
                     </div>
 
                 </body>
 
-                </html>
+        </html>
 
-                <?php } ?>
+    <?php } ?>

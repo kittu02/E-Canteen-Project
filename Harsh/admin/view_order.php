@@ -1,31 +1,14 @@
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-                <!DOCTYPE html>
-                <html lang="en">
-                <?php
-include("../connection/connect.php");
-error_reporting(0);
-session_start();
-
+ 
+<!DOCTYPE html>
+<html lang="en">
+<?php
+    include("../connection/connect.php");
+    error_reporting(0);
+    session_start();
 ?>
 
                 <head>
-                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+     
 
                     <meta charset="utf-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,15 +42,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     </div>
 
                     <div id="main-wrapper">
-                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                         <div class="header">
                             <nav class="navbar top-navbar navbar-expand-md navbar-light">
@@ -85,17 +59,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 
                                     <ul class="navbar-nav my-lg-0">
 
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
                                         <li class="nav-item dropdown">
 
                                             <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
@@ -110,15 +73,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
@@ -144,11 +98,11 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                         <li> <a href="dashboard.php"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
                                         <li class="nav-label">Log</li>
                                         <li> <a href="all_users.php"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
-                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Restaurant</span></a>
+                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Canteen</span></a>
                                             <ul aria-expanded="false" class="collapse">
-                                                <li><a href="all_restaurant.php">All Restaurants</a></li>
+                                                <li><a href="all_canteen.php">All Canteens</a></li>
                                                 <li><a href="add_category.php">Add Category</a></li>
-                                                <li><a href="add_restaurant.php">Add Restaurant</a></li>
+                                                <li><a href="add_canteen.php">Add Canteen</a></li>
 
                                             </ul>
                                         </li>
@@ -166,23 +120,13 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 </nav>
 
                             </div>
-                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
 
-*/ -->
 
                         </div>
 
                         <div class="page-wrapper">
 
-                            <div style="padding-top: 10px;">
-                                <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
-                            </div>
+                            
 
 
                             <div class="container-fluid">
@@ -190,15 +134,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 <div class="row">
                                     <div class="col-12">
 
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                         
 
                                         <div class="col-lg-12">
                                             <div class="card card-outline-primary">
@@ -213,20 +149,8 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                             <?php
 											$sql="SELECT users.*, users_orders.* FROM users INNER JOIN users_orders ON users.u_id=users_orders.u_id where o_id='".$_GET['user_upd']."'";
 												$query=mysqli_query($db,$sql);
-												$rows=mysqli_fetch_array($query);
-												
-												
-																		
+												$rows=mysqli_fetch_array($query);																
 												?>
-                                                            <!-- /*!
-                                                * Author Name: MH RONY.
-                                                * GigHub Link: https://github.com/dev-mhrony
-                                                * Facebook Link:https://www.facebook.com/dev.mhrony
-                                                * Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                                                for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-                                                * Visit My Website : developerrony.com
-                                                
-                                                */ -->
 
 
                                                             <tr>
@@ -271,15 +195,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                     <center>$<?php echo $rows['price']; ?></center>
                                                                 </td>
 
-                                                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                                 
 
                                                             </tr>
                                                             <tr>
@@ -296,15 +212,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                     <center><?php echo $rows['date']; ?></center>
                                                                 </td>
 
-                                                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                                 
 
                                                             </tr>
                                                             <tr>
@@ -345,32 +253,13 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                 <?php 
 																			} 
 																			?>
-
-
                                                             </tr>
-
-
-
-
-                                                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
-
                                                         </tbody>
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -379,11 +268,9 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     </div>
 
                     <footer class="footer"> © 2022 - Online Food Ordering System </footer>
-
                     </div>
 
                     </div>
-
                     <script src="js/lib/jquery/jquery.min.js"></script>
                     <script src="js/lib/bootstrap/js/popper.min.js"></script>
                     <script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
@@ -402,4 +289,4 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     <script src="js/lib/datatables/datatables-init.js"></script>
                 </body>
 
-                </html>
+            </html>

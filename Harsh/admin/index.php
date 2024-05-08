@@ -1,7 +1,7 @@
 
-                <!DOCTYPE html>
-                <html lang="en">
-                <?php
+<!DOCTYPE html>
+<html lang="en">
+<?php
 include("../connection/connect.php");
 error_reporting(0);
 session_start();
@@ -12,7 +12,7 @@ if(isset($_POST['submit']))
 	
 	if(!empty($_POST["submit"])) 
      {
-	$loginquery ="SELECT * FROM admin WHERE username='$username' && password='".md5($password)."'";
+	$loginquery ="SELECT * FROM admin WHERE username='$username' && password='$password'";
 	$result=mysqli_query($db, $loginquery);
 	$row=mysqli_fetch_array($result);
 	
@@ -71,5 +71,5 @@ if(isset($_POST['submit']))
                     <script src='js/index.js'></script>
                 </body>
 
-                </html>
+        </html>
                 

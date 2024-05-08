@@ -1,44 +1,24 @@
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-                <!DOCTYPE html>
-                <html lang="en">
-                <?php
+ 
+<!DOCTYPE html>
+<html lang="en">
+<?php
 include("../connection/connect.php");
 error_reporting(0);
 session_start();
 
-
-
-
-if(isset($_POST['submit']))          
+if(isset($_POST['submit']))        
 {
 	
-			
-		
-			
-		  
-		
-		
 		if(empty($_POST['c_name'])||empty($_POST['res_name'])||$_POST['email']==''||$_POST['phone']==''||$_POST['url']==''||$_POST['o_hr']==''||$_POST['c_hr']==''||$_POST['o_days']==''||$_POST['address']=='')
 		{	
 											$error = 	'<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>All fields Must be Fillup!</strong>
 															</div>';
-									
-		
-								
+						
 		}
 	else
 		{
-		
 				$fname = $_FILES['file']['name'];
 								$temp = $_FILES['file']['tmp_name'];
 								$fsize = $_FILES['file']['size'];
@@ -46,7 +26,7 @@ if(isset($_POST['submit']))
 								$extension = strtolower(end($extension));  
 								$fnew = uniqid().'.'.$extension;
    
-								$store = "Res_img/".basename($fnew);                      
+								$store = "Res_img/".basename($fnew);                   
 	
 					if($extension == 'jpg'||$extension == 'png'||$extension == 'gif' )
 					{        
@@ -58,25 +38,22 @@ if(isset($_POST['submit']))
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>Max Image Size is 1024kb!</strong> Try different Image.
 															</div>';
-	   
 										}
-		
 									else
 										{
 												
 												
 												$res_name=$_POST['res_name'];
 				                                 
-												$sql = "INSERT INTO restaurant(c_id,title,email,phone,url,o_hr,c_hr,o_days,address,image) VALUE('".$_POST['c_name']."','".$res_name."','".$_POST['email']."','".$_POST['phone']."','".$_POST['url']."','".$_POST['o_hr']."','".$_POST['c_hr']."','".$_POST['o_days']."','".$_POST['address']."','".$fnew."')";  // store the submited data ino the database :images
-												mysqli_query($db, $sql); 
+												$sql = "update restaurant set c_id='$_POST[c_name]', title='$res_name',email='$_POST[email]',phone='$_POST[phone]',url='$_POST[url]',o_hr='$_POST[o_hr]',c_hr='$_POST[c_hr]',o_days='$_POST[o_days]',address='$_POST[address]',image='$fnew' where rs_id='$_GET[res_upd]' ";  // store the submited data ino the database :images												mysqli_query($db, $sql); 
+													mysqli_query($db, $sql); 
 												move_uploaded_file($temp, $store);
 			  
 													$success = 	'<div class="alert alert-success alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-																 New Restaurant Added Successfully.
+																<strong>Record Updated!</strong>.
 															</div>';
-                
-	
+
 										}
 					}
 					elseif($extension == '')
@@ -87,43 +64,15 @@ if(isset($_POST['submit']))
 															</div>';
 					}
 					else{
-					
 											$error = 	'<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>invalid extension!</strong>png, jpg, Gif are accepted.
 															</div>';
-						
-	   
 						}               
-	   
-	   
 	   }
-
-
-
-	
-	
-	
-
 }
 
-
-
-
-
-
-
-
 ?>
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                 <head>
                     <meta charset="utf-8">
@@ -132,20 +81,19 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     <meta name="description" content="">
                     <meta name="author" content="">
                     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-                    <title>Add Restaurant</title>
+                    <title>Update Canteen</title>
                     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
                     <link href="css/helper.css" rel="stylesheet">
                     <link href="css/style.css" rel="stylesheet">
                 </head>
 
-                <body class="fix-header">
 
+                <body class="fix-header">
                     <div class="preloader">
                         <svg class="circular" viewBox="25 25 50 50">
                             <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
                         </svg>
                     </div>
-
                     <div id="main-wrapper">
 
                         <div class="header">
@@ -160,50 +108,66 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 
                                     <ul class="navbar-nav mr-auto mt-md-0">
 
+                                        <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th-large"></i></a>
+                                            <div class="dropdown-menu animated zoomIn">
+                                                <ul class="mega-dropdown-menu row">
+                                                    <li class="col-lg-3  m-b-30">
+                                                        <h4 class="m-b-20">CONTACT US</h4>
 
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
-                                    </ul>
-
-                                    <ul class="navbar-nav my-lg-0">
-
-
-
-                                        <li class="nav-item dropdown">
-
-                                            <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
-                                                <ul>
-                                                    <li>
-                                                        <div class="drop-title">Notifications</div>
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="email" class="form-control" placeholder="Enter email">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
+                                                            </div>
+                                                            <button type="submit" class="btn btn-info">Submit</button>
+                                                        </form>
                                                     </li>
+                                                    <li class="col-lg-3 col-xlg-3 m-b-30">
+                                                        <h4 class="m-b-20">List style</h4>
 
-                                                    <li>
-                                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                                        <ul class="list-style-none">
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="col-lg-3 col-xlg-3 m-b-30">
+                                                        <h4 class="m-b-20">List style</h4>
+
+                                                        <ul class="list-style-none">
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="col-lg-3 col-xlg-3 m-b-30">
+                                                        <h4 class="m-b-20">List style</h4>
+
+                                                        <ul class="list-style-none">
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
 
-                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                    </ul>
 
 
+                                    <ul class="navbar-nav my-lg-0">
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
                                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
@@ -216,17 +180,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 </div>
                             </nav>
                         </div>
-
                         <div class="left-sidebar">
-                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                             <div class="scroll-sidebar">
 
@@ -237,20 +191,11 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                         <li> <a href="dashboard.php"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
                                         <li class="nav-label">Log</li>
                                         <li> <a href="all_users.php"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
-                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Restaurant</span></a>
+                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Canteen</span></a>
                                             <ul aria-expanded="false" class="collapse">
-                                                <li><a href="all_restaurant.php">All Restaurants</a></li>
+                                                <li><a href="all_canteen.php">All Canteens</a></li>
                                                 <li><a href="add_category.php">Add Category</a></li>
-                                                <li><a href="add_restaurant.php">Add Restaurant</a></li>
-                                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+                                                <li><a href="add_canteen.php">Add Canteen</a></li>
 
                                             </ul>
                                         </li>
@@ -268,33 +213,17 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                 </nav>
 
                             </div>
-                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                         </div>
 
                         <div class="page-wrapper">
-                            <div style="padding-top: 10px;">
-                                <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
+                            
+
+                            <div class="row page-titles">
+                                <div class="col-md-5 align-self-center">
+                                    <h3 class="text-primary">Dashboard</h3>
+                                </div>
                             </div>
-
-                            <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
 
                             <div class="container-fluid">
 
@@ -302,52 +231,32 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 
                                 <?php  echo $error;
 									        echo $success; ?>
-
-                                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
-
                                 <div class="col-lg-12">
                                     <div class="card card-outline-primary">
-                                        <div class="card-header">
-                                            <h4 class="m-b-0 text-white">Add Restaurant</h4>
-                                        </div>
+
+                                        <h4 class="m-b-0 ">Update Canteen</h4>
+
                                         <div class="card-body">
                                             <form action='' method='post' enctype="multipart/form-data">
                                                 <div class="form-body">
-
+                                                    <?php $ssql ="select * from restaurant where rs_id='$_GET[res_upd]'";
+													$res=mysqli_query($db, $ssql); 
+													$row=mysqli_fetch_array($res);?>
                                                     <hr>
                                                     <div class="row p-t-20">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label class="control-label">Restaurant Name</label>
-                                                                <input type="text" name="res_name" class="form-control">
+                                                                <label class="control-label">Canteen Name</label>
+                                                                <input type="text" name="res_name" value="<?php echo $row['title'];  ?>" class="form-control" placeholder="John doe">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-6">
                                                             <div class="form-group has-danger">
                                                                 <label class="control-label">Bussiness E-mail</label>
-                                                                <input type="text" name="email" class="form-control form-control-danger">
+                                                                <input type="text" name="email" value="<?php echo $row['email'];  ?>" class="form-control form-control-danger" placeholder="example@gmail.com">
                                                             </div>
                                                         </div>
-                                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                                                     </div>
 
@@ -355,27 +264,18 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Phone </label>
-                                                                <input type="text" name="phone" class="form-control">
+                                                                <input type="text" name="phone" class="form-control" value="<?php echo $row['phone'];  ?>" placeholder="1-(555)-555-5555">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-6">
                                                             <div class="form-group has-danger">
-                                                                <label class="control-label">Website URL</label>
-                                                                <input type="text" name="url" class="form-control form-control-danger">
+                                                                <label class="control-label">website URL</label>
+                                                                <input type="text" name="url" class="form-control form-control-danger" value="<?php echo $row['url'];  ?>" placeholder="http://example.com">
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                                                     <div class="row">
                                                         <div class="col-md-6">
@@ -389,19 +289,9 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                     <option value="9am">9am</option>
                                                                     <option value="10am">10am</option>
                                                                     <option value="11am">11am</option>
-                                                                    <option value="12pm">12pm</option>
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -414,36 +304,20 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                     <option value="6pm">6pm</option>
                                                                     <option value="7pm">7pm</option>
                                                                     <option value="8pm">8pm</option>
-                                                                    <option value="9pm">9pm</option>
-                                                                    <option value="10pm">10pm</option>
-                                                                    <option value="11pm">11pm</option>
-                                                                    <option value="12am">12am</option>
-                                                                    <option value="1am">1am</option>
-                                                                    <option value="2am">2am</option>
-                                                                    <option value="3am">3am</option>
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Open Days</label>
                                                                 <select name="o_days" class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
                                                                     <option>--Select your Days--</option>
-                                                                    <option value="Mon-Tue">Mon-Tue</option>
-                                                                    <option value="Mon-Wed">Mon-Wed</option>
-                                                                    <option value="Mon-Thu">Mon-Thu</option>
-                                                                    <option value="Mon-Fri">Mon-Fri</option>
-                                                                    <option value="Mon-Sat">Mon-Sat</option>
+                                                                    <option value="mon-tue">mon-tue</option>
+                                                                    <option value="mon-wed">mon-wed</option>
+                                                                    <option value="mon-thu">mon-thu</option>
+                                                                    <option value="mon-fri">mon-fri</option>
+                                                                    <option value="mon-sat">mon-sat</option>
                                                                     <option value="24hr-x7">24hr-x7</option>
                                                                 </select>
                                                             </div>
@@ -458,17 +332,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                         </div>
 
 
-                                                        <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
-
-
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="control-label">Select Category</label>
@@ -476,9 +339,9 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                                                     <option>--Select Category--</option>
                                                                     <?php $ssql ="select * from res_category";
 													$res=mysqli_query($db, $ssql); 
-													while($row=mysqli_fetch_array($res))  
+													while($rows=mysqli_fetch_array($res))  
 													{
-                                                       echo' <option value="'.$row['c_id'].'">'.$row['c_name'].'</option>';;
+                                                       echo' <option value="'.$rows['c_id'].'">'.$rows['c_name'].'</option>';;
 													}  
                                                  
 													?>
@@ -488,15 +351,17 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
 
 
 
+
                                                     </div>
 
-                                                    <h3 class="box-title m-t-40">Restaurant Address</h3>
+                                                    <h3 class="box-title m-t-40">Canteen Address</h3>
                                                     <hr>
+
                                                     <div class="row">
                                                         <div class="col-md-12 ">
                                                             <div class="form-group">
 
-                                                                <textarea name="address" type="text" style="height:100px;" class="form-control"></textarea>
+                                                                <textarea name="address" type="text" style="height:100px;" class="form-control"> <?php echo $row['address']; ?> </textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -506,7 +371,7 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                                         </div>
                                         <div class="form-actions">
                                             <input type="submit" name="submit" class="btn btn-primary" value="Save">
-                                            <a href="add_restaurant.php" class="btn btn-inverse">Cancel</a>
+                                            <a href="all_canteen.php" class="btn btn-inverse">Cancel</a>
                                         </div>
                                         </form>
                                     </div>
@@ -518,15 +383,6 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     </div>
 
                     </div>
-                    <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
 
                     </div>
 
@@ -539,14 +395,4 @@ for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@
                     <script src="js/custom.min.js"></script>
 
                 </body>
-
-                </html>
-                <!-- /*!
-* Author Name: MH RONY.
-* GigHub Link: https://github.com/dev-mhrony
-* Facebook Link:https://www.facebook.com/dev.mhrony
-* Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-* Visit My Website : developerrony.com
-
-*/ -->
+        </html>

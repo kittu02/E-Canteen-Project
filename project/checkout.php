@@ -15,7 +15,7 @@ function function_alert() {
 if(empty($_SESSION["user_id"]))
 {
 	header('location:login.php');
-}
+}   
 else{						  
 		foreach ($_SESSION["cart_item"] as $item)
 		{

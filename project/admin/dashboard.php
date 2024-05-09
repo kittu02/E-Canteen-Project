@@ -41,7 +41,7 @@ else
                 <div class="navbar-header">
                     <a class="navbar-brand" href="dashboard.php">
 
-                        <span><img src="images/icn.png" alt="homepage" class="dark-logo" /></span>
+                        <span><img src="images/icn.png" alt="homepage" height="40px" class="dark-logo" /></span>
                     </a>
                 </div>
 
